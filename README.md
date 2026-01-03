@@ -137,12 +137,11 @@ Le serveur Zabbix collecte les métriques depuis les agents installés sur chaqu
    docker --version
    docker-compose --version
 
-![Figure 1](images/etat_running.png)
-
 2. Créer dossier & docker-compose.yml :
 
    mkdir zabbix && cd zabbix
-   nano docker-compose.yml (le code dans le fichier en haut)
+   nano docker-compose.yml 
+   (le code dans le fichier en haut)
 
    
 
@@ -153,11 +152,14 @@ Le serveur Zabbix collecte les métriques depuis les agents installés sur chaqu
    sudo docker ps
    ```
 
-![Figure 1](images/etat_running.png)
+![Figure 1](images/linux_zabbix.png)
 
 4. Interface Web : `http://IP-publique` → login `Admin / zabbix`
    **Figure 6 : Conteneurs running**
    **Figure 7 : Zabbix login réussi**
+
+   ![Figure 1](images/login.png)
+   ![Figure 1](images/acceuil.png)
 
 
 ### Étape 4 : Configuration des Agents
@@ -169,20 +171,24 @@ wget https://repo.zabbix.com/zabbix/6.4/ubuntu/pool/main/z/zabbix-release/zabbix
 sudo dpkg -i zabbix-release_6.4-1+ubuntu22.04_all.deb
 sudo apt update && sudo apt install zabbix-agent -y
 sudo nano /etc/zabbix/zabbix_agentd.conf
-# Server=IP_Zabbix
-# ServerActive=IP_Zabbix
-# Hostname=NomEtudiant-Linux-Client
+# le code  de configuration du fichier et au dessus  zabbix_agentd.conf
 sudo systemctl restart zabbix-agent
 sudo systemctl enable zabbix-agent
 sudo systemctl status zabbix-agent
 ```
+![Figure 1](images/etat_running.png)
 
 **Client Windows :**
+![Figure 1](images/windows.png)
 
 * Télécharger MSI 6.4 64-bit → installer
+![Figure 1](images/zabbix_downloads.png)
 * Configurer `zabbix_agentd.conf` : Server, ServerActive, Hostname
+![Figure 1](images/zabbix_conf.png)
 * Redémarrer service `Zabbix Agent`
+![Figure 1](images/restart_z_w.png)
 * **Figure 8 : Configuration agents**
+
 
 ---
 
@@ -194,11 +200,12 @@ sudo systemctl status zabbix-agent
    * Windows : Group `Windows servers`, Template `Windows by Zabbix agent`
    * **Figure 9 : Hosts verts**
 
-2. Vérifier métriques :
+   ![Figure 1](images/hosts.png)
 
-   * Monitoring → Latest data → CPU / RAM
-   * Monitoring → Graphs → CPU Load / Memory
-   * **Figure 10 : Graph CPU/RAM**
+2. Vérifier métriques :
+![Figure 1](images/final.png)
+
+  
 
 3. Tester alertes :
 
