@@ -130,23 +130,21 @@ Le serveur Zabbix collecte les métriques depuis les agents installés sur chaqu
 **Objectif :** Installer Docker et lancer Zabbix conteneurisé
 
 1. Connexion SSH → Serveur Zabbix  
-   ```bash
+ 
    sudo apt update && sudo apt upgrade -y
    sudo apt install docker.io docker-compose -y
    sudo systemctl enable docker --now
    docker --version
    docker-compose --version
-````
+
 ![Figure 1](images/etat_running.png)
 
 2. Créer dossier & docker-compose.yml :
 
-   ```bash
    mkdir zabbix && cd zabbix
-   nano docker-compose.yml
-   ```
+   nano docker-compose.yml (le code dans le fichier en haut)
 
-   * Copier le YAML avec `zabbix-server`, `zabbix-web`, `zabbix-db` (voir README précédent)
+   
 
 3. Lancer conteneurs :
 
@@ -155,11 +153,12 @@ Le serveur Zabbix collecte les métriques depuis les agents installés sur chaqu
    sudo docker ps
    ```
 
+![Figure 1](images/etat_running.png)
+
 4. Interface Web : `http://IP-publique` → login `Admin / zabbix`
    **Figure 6 : Conteneurs running**
    **Figure 7 : Zabbix login réussi**
 
----
 
 ### Étape 4 : Configuration des Agents
 
