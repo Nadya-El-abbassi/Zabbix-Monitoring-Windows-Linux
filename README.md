@@ -59,9 +59,14 @@ Le serveur Zabbix collecte les métriques depuis les agents installés sur chaqu
    ![Figure 1](images/5.png)
 
 2. Vérifier Internet Gateway et Route Table :
+ ![Figure 1](images/7.png)
+
    - IGW attaché automatiquement
    - Route Table : ajouter route 0.0.0.0/0 → IGW
+   ![Figure 1](images/8.png)
+   ![Figure 1](images/10.png)
    - Associer à votre subnet public
+   ![Figure 1](images/11.png)
    - **Figure 2 : Subnet & IGW**
 
 3. Créer Security Group (SG) :
@@ -74,6 +79,10 @@ Le serveur Zabbix collecte les métriques depuis les agents installés sur chaqu
      - RDP 3389 My IP
    - Outbound : par défaut
    - **Figure 3 : Security Group**
+   ![Figure 1](images/12.png)
+   ![Figure 1](images/13.png)
+   ![Figure 1](images/14.png)
+   ![Figure 1](images/15.png)
 
 ---
 
@@ -81,22 +90,33 @@ Le serveur Zabbix collecte les métriques depuis les agents installés sur chaqu
 
 **Objectif :** Créer 3 machines virtuelles.
 
-1. Créez une **Key Pair** : `NomEtudiant-Key.pem`
+1. Créez une **Key Pair** : `NomEtudiant-Key.pem` pour toute les instances. 
 
 2. Instances :
    - **Serveur Zabbix (Ubuntu t3.large)**  
      - AMI : Ubuntu Server 22.04 LTS  
      - VPC/Subnet public, SG, Auto-assign Public IP  
      - Stockage : 8 GiB gp3  
+     ![Figure 1](images/17.png)
+     ![Figure 1](images/18.png)
+     ![Figure 1](images/19.png)
+     ![Figure 1](images/20.png)
+     ![Figure 1](images/21.png)
+     ![Figure 1](images/22.png)
+     ![Figure 1](images/23.png)
      - **Figure 4 : Instances Running**
    - **Client Linux (t3.medium)**  
+   avec mème paramétres: 
      - AMI : Ubuntu 22.04, même VPC/SG  
      - Nom : `NomEtudiant-Linux-Client`
+       ![Figure 1](images/24.png)
    - **Client Windows (t3.large)**  
+     ![Figure 1](images/100.png)
      - AMI : Windows Server 2022  
      - Nom : `NomEtudiant-Windows-Client`  
      - Décryptez le mot de passe via .pem  
-     - **Figure 5 : Détails instance Windows**
+     - **Figure 5 : Détails instance *
+     ![Figure 1](images/200.png)
 
 3. Connexions :
    - Linux SSH : `ssh -i NomEtudiant-Key.pem ubuntu@IP`
