@@ -2,8 +2,7 @@
 # 📊 Projet AWS – Supervision Centralisée avec Zabbix (Docker)
 
 ## 🔍 C’est quoi Zabbix ?
-![Figure 1 : Création du VPC](images/zabbix_logo.png)
-
+![Figure 1](images/zabbix_logo.png)
 
 **Zabbix** est une **solution open-source de supervision et de monitoring** permettant de surveiller en temps réel l’état, les performances et la disponibilité des systèmes informatiques, serveurs, applications et équipements réseau.
 <img>
@@ -50,10 +49,14 @@ Le serveur Zabbix collecte les métriques depuis les agents installés sur chaqu
 
 1. Créer le VPC dans AWS :
    - Services → VPC → Your VPCs → Create VPC → "VPC and more"
-   - Nom : `NomEtudiant-VPC`, CIDR : 10.0.0.0/16, AZ : 1, Subnet public : 10.0.0.0/24
+   - Nom : `NomVPC`, CIDR : 10.0.0.0/16, AZ : 1, Subnet public : 10.0.0.0/24
    - Activez DNS hostnames & DNS resolution
    - Cliquez "Create VPC"
    - **Figure 1 : Création du VPC**
+   ![Figure 1](images/1.png)
+   ![Figure 1](images/2.png)
+   ![Figure 1](images/3.png)
+   ![Figure 1](images/5.png)
 
 2. Vérifier Internet Gateway et Route Table :
    - IGW attaché automatiquement
