@@ -115,7 +115,8 @@ Le serveur Zabbix collecte les métriques depuis les agents installés sur chaqu
      - AMI : Windows Server 2022  
      - Nom : `NomEtudiant-Windows-Client`  
      - Décryptez le mot de passe via .pem  
-     - **Figure 5 : Détails instance *
+     - **Figure 5 : Détails instance**
+
      ![Figure 1](images/200.png)
 
 3. Connexions :
@@ -136,6 +137,7 @@ Le serveur Zabbix collecte les métriques depuis les agents installés sur chaqu
    docker --version
    docker-compose --version
 ````
+![Figure 1](images/etat_running.png)
 
 2. Créer dossier & docker-compose.yml :
 
