@@ -1,6 +1,8 @@
 
 # 📊 Projet AWS – Supervision Centralisée avec Zabbix (Docker)
 
+Ce fichier contient toutes les informations nécessaires pour déployer Zabbix et assurer le monitoring des clients Windows et Linux. Il contient également les fichiers de configuration.
+
 ## 🔍 C’est quoi Zabbix ?
 ![Figure 1](images/zabbix_logo.png)
 
@@ -214,39 +216,9 @@ sudo systemctl status zabbix-agent
 
 ---
 
-### Étape 6 : Finalisation
+### Conclusion
 
-1. **GitHub** :
-
-   * Créez repo : `Projet-Zabbix-AWS`
-   * Ajouter fichiers : docker-compose.yml, configs, captures PNG, diagrammes
-   * Commit & push :
-
-   ```bash
-   git add .
-   git commit -m "Projet complet"
-   git push
-   ```
-
-   * Lien à inclure dans le rapport
-
-2. **Rapport PDF** :
-
-   * Page de garde avec logo, titre, votre nom, Prof. Azeddine KHIAT, 2025/2026, filière
-   * Sommaire : sections 1-7
-   * Captures avec légendes
-   * Conclusion : difficultés rencontrées et solutions
-
-3. **Vidéo présentation** (5-10 min) :
-
-   * OBS : écran + audio + webcam pour intro
-   * Montrer instances running, Zabbix interface, Hosts verts, Latest data
-   * Provoquer alerte test
-   * Conclusion résumé
-
-4. **Éteindre tout** : Stop instances, soumettre PDF, GitHub, vidéo
-
----
+Ce projet a permis de déployer et configurer Zabbix sur AWS afin de superviser des instances Linux et Windows. Il met en évidence l’utilisation du cloud, de Docker et des agents Zabbix pour le suivi des performances système (CPU, mémoire, disponibilité). Cette réalisation a renforcé les compétences en monitoring, cloud computing et administration système.
 
 ## 🧠 Acquis et Compétences
 
@@ -255,12 +227,3 @@ sudo systemctl status zabbix-agent
 * Supervision multi-OS
 * Administration Linux & Windows
 * Gestion sécurité réseau et monitoring avancé
-
-```
-
----
-
-Si tu veux, je peux maintenant te créer **une version encore plus “GitHub-ready” avec dossiers recommandés** (Docker, config agents, captures, rapport PDF, vidéo) pour que ton dépôt soit **parfait pour soutenance et valorisation**.  
-
-Veux‑tu que je fasse ça ?
-```
