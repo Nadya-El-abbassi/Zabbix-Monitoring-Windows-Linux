@@ -2,8 +2,11 @@
 # 📊 Projet AWS – Supervision Centralisée avec Zabbix (Docker)
 
 ## 🔍 C’est quoi Zabbix ?
+![Figure 1 : Création du VPC](images/zabbix_logo.png)
+
 
 **Zabbix** est une **solution open-source de supervision et de monitoring** permettant de surveiller en temps réel l’état, les performances et la disponibilité des systèmes informatiques, serveurs, applications et équipements réseau.
+<img>
 
 Zabbix collecte automatiquement des métriques telles que :  
 - CPU, mémoire RAM, espace disque, trafic réseau  
